@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist", // 編譯後的文件輸出目錄
+    "rootDir": "./src", // 原始碼目錄
+    "target": "ES6", // 指定 ECMAScript 的版本
+    "module": "commonjs", // 使用 CommonJS 模組系統
+    "strict": true, // 開啟嚴格模式
+    "esModuleInterop": true, // 允許與 CommonJS 和 ES 模塊互操作
+    "forceConsistentCasingInFileNames": true, // 文件名大小寫強一致性
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */
+  },
+  "include": ["src/**/*"], // 包含 src 目錄中的所有 TypeScript 文件
+  "exclude": ["node_modules"] // 排除 node_modules
+}
