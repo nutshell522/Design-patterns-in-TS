@@ -68,7 +68,7 @@ export abstract class Weapon {
 // * 長劍 (Concrete Product) - 鬥士武器
 export class LongSword extends Weapon {
   protected simpleName: string = '長劍';
-  protected atk: number = 15;
+  protected atk: number = 10;
   protected range: number = 1;
 }
 
@@ -92,7 +92,7 @@ export interface EquipFactory {
 export class WarriorEquipFactory implements EquipFactory {
   productWeapon(): Weapon {
     const weapon: Weapon = new LongSword();
-    weapon.setAtk(15);
+    weapon.setAtk(10);
     weapon.setRange(1);
     return weapon;
   }
