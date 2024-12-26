@@ -14,15 +14,13 @@ export interface KitchenWorker {
 export class Barkeep implements KitchenWorker {
   public finshOrder() {
     console.log('拿出杯子->加滿冰塊->把飲料倒進杯子->飲料完成');
-    console.log();
   }
 }
 
 // * 點心廚師 (Concrete Receiver)
-export class Cheff implements KitchenWorker {
+export class Chef implements KitchenWorker {
   public finshOrder() {
     console.log('取出麵包->美乃滋塗上滿滿的麵包->丟進烤箱->撒上可以吃的裝飾->點心完成');
-    console.log();
   }
 }
 
@@ -89,7 +87,7 @@ export class Waitress {
     }
 
     if (order.getName() == 'drinkOrder') {
-      if (this._snackQty <= 0) {
+      if (this._drinkQty <= 0) {
         console.log('飲料賣完了');
       } else {
         console.log('增加飲料訂單');
@@ -114,7 +112,11 @@ export class Waitress {
       this._drinkQty++;
     }
 
-    this._orderList = this._orderList.filter((o) => o != order);
+    // 移除最後一筆訂單
+    const index = this._orderList.lastIndexOf(order);
+    if (index !== -1) {
+      this._orderList.splice(index, 1);
+    }
   }
 
   /**
