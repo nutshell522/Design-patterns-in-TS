@@ -6,6 +6,8 @@ import StrategyTest from './patterns/05_策略模式_Strategy/SrategyTest';
 import DecoratorTest from './patterns/06_裝飾者模式_Decorator/DecoratorTest';
 import ObserverTest from './patterns/07_觀察者模式_Observer/ObserverTest';
 import CommandTest from './patterns/08_命令模式_Command/CommandTest';
+import AdapterTest from './patterns/09_轉接器模式_Adapter/AdapterTest';
+import FacadeTest from './patterns/10_表象(外觀)模式_Facade/FacadeTest';
 
 // SingletonTest(); // 單例模式測試
 
@@ -21,4 +23,8 @@ import CommandTest from './patterns/08_命令模式_Command/CommandTest';
 
 // ObserverTest(); // 觀察者模式
 
-CommandTest(); // 命令模式
+// CommandTest(); // 命令模式
+
+// AdapterTest(); // 轉接器模式
+
+FacadeTest(); // 外觀模式
